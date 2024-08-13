@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ٌRevil's Message Design Vol.4">
+    <meta name="keywords" content="TemRevil, Tem Revil, Whatsapp, Message, Messanger">
+    <meta name="author" content="Tem Revil">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#124">
+    <meta name="referrer" content="no-referrer">
+
+    <link rel="icon" href="Background/icon.png" type="image/gif">
+    <title>Evick - Contacts</title>
+
+    <link rel="stylesheet" href="CSS/all.css">
+    <link rel="stylesheet" href="CSS/Main.css">
+    <link rel="stylesheet" href="CSS/Media.css">
+</head>
+<body class="flex row">
+    <div class="view flex center">
+        <button id="toggleButton" class="icons transition"><i class="fa fa-x">Toggle</i></button>
+        <view class="flex center">
+            <img id="displayedImage" src="#" alt="Displayed Image">
+        </view>
+    </div>
+    <div class="add flex center">
+        <button id="toggleButton" class="icons transition" onclick="toggleDisplay()"><i class="fa fa-x">Toggle</i></button>
+        <div class="add-card">
+            <p class="title"><i class="fa-solid fa-plus-large"></i> Add Chat</p>
+            <div class="flex col">
+                <label for="add-img" class="add-img flex center" id="add-img-label"><i class="fa-solid fa-plus-large" id="add-img-icon"></i></label>
+                <input type="file" id="add-img" name="file" accept="image/*">                
+                <p class="text">Name</p>
+                <input type="text" class="text" id="name">
+                <p class="text">Number</p>
+                <input type="text" class="text" id="number">
+            </div>
+            <p class="error-2 text"></p>
+            <button class="transition" id="add-button"><i class="fa-solid fa-plus-large"></i></button>
+        </div>
+    </div>
+    <section class="aside transition">
+        <div class="aside-head">
+            <p class="title">Chats</p>
+            <button class="icons" onclick="toggleViewAdd()"><i class="fas fa-plus"></i></button>
+        </div>
+        <div class="flex col center" id="chats" style="margin-top: 80px;">
+            <div class="person flex row center transition">
+                <div class="person-img">
+                    <img src="Background/Person/Natsha Romanof.jpg" alt="Person">
+                </div>
+                <div class="person-data flex col">
+                    <p class="name">Natsha Romanof</p>
+                    <p class="statues">active</p>
+                </div>
+                <div class="person-options">
+                    <button class="icons"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                </div>
+            </div>
+            <div class="person flex row center transition">
+                <div class="person-img">
+                    <img src="Background/Person/Robert Downey JR.jpg" alt="Person">
+                </div>
+                <div class="person-data flex col">
+                    <p class="name">Robert Downey JR</p>
+                    <p class="statues">active 2hr ago</p>
+                </div>
+                <div class="person-options">
+                    <button class="icons"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                </div>
+            </div>
+            <div class="person flex row center transition">
+                <div class="person-img">
+                    <img src="Background/Person/Bucky Barnes.jpg" alt="Person">
+                </div>
+                <div class="person-data flex col">
+                    <p class="name">Bucky Barnes</p>
+                    <p class="statues">active</p>
+                </div>
+                <div class="person-options">
+                    <button class="icons"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                </div>
+            </div>
+            <div class="person flex row center transition">
+                <div class="person-img">
+                    <img src="Background/Person/Captain America.jpg" alt="Person">
+                </div>
+                <div class="person-data flex col">
+                    <p class="name">Steve Rogers</p>
+                    <p class="statues">active</p>
+                </div>
+                <div class="person-options">
+                    <button class="icons"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                </div>
+            </div>
+            <div class="person flex row center transition">
+                <div class="person-img">
+                    <img src="Background/Person/John Wick.jpg" alt="Person">
+                </div>
+                <div class="person-data flex col">
+                    <p class="name">John Wick</p>
+                    <p class="statues">active 7hr ago</p>
+                </div>
+                <div class="person-options">
+                    <button class="icons"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                </div>
+            </div>
+        </div>
+        <p class="text rights">All Rights Reserved <a href="https://github.com/temrevil" target="_blank" class="links">&#169;TemRevil</a> 2024</p>
+    </section>
+    <section class="main-content flex col center">
+        <header class="header flex center">
+            <div class="flex center">
+                <img src="Background/Person/Natsha Romanof.jpg" alt="Person" class="img transition">
+                <div class="flex col">                    
+                    <p class="name">Natsha Romanof</p>
+                    <p class="statues">active</p>
+                </div>
+            </div>
+            <div class="title">Evick</div>
+            <div class="options">
+                <button><i class="fa-solid fa-bars icons"></i></button>
+                <ul>
+                    <li><button class="flex row center text transition"><i class="fa-solid fa-folder"></i> Files</button></li>
+                    <li><button class="flex row center text transition"><i class="fa-solid fa-address-card"></i> About</button></li>
+                    <li><button class="flex row center text transition"><i class="fa-solid fa-trash"></i> Delete</button></li>
+                </ul>
+            </div>
+        </header>
+        <section class="message flex col">
+            <div class="message-box flex col">
+                <!-- <div class="message-user text">
+                    <div class="the-message">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ut laudantium perferendis reiciendis dolor amet iusto voluptatem sint quos, earum adipisci error in modi, natus nulla, saepe ullam maiores! Laboriosam.
+                        <br><span class="time">10:32 PM</span>
+                    </div>
+                </div>
+                <div class="message-person text">
+                    <div class="the-message">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ut laudantium perferendis reiciendis dolor amet iusto voluptatem sint quos, earum adipisci error in modi, natus nulla, saepe ullam maiores! Laboriosam.
+                        <br><span class="time">10:35 PM</span>
+                    </div>
+                </div>
+                <div class="message-user text">
+                    <div class="message-img">
+                        <img src="#" alt="Image" id="uploadedImage" class="uploaded-image">
+                        <br><span class="time">10:35 PM</span>
+                    </div>
+                </div> -->
+            </div>
+            <div class="send-box">
+                <div class="fileUploadWrapper">
+                  <label for="file">
+                    <i class="fa-solid fa-plus"></i>
+                    <span class="tooltip">Add an image</span>
+                  </label>
+                  <input type="file" id="file" name="file" accept="image/*">
+                </div>
+                <input class="text" required="" placeholder="Message..." type="text" id="messageInput" autofocus>
+                <button id="sendButton" class="transition"><i class="fa-regular fa-paper-plane"></i></button>
+            </div>
+            <p class="text error"></p>
+        </section>
+    </section>
+    <script src="JavaScript/all.js"></script>
+    <script src="JavaScript/Main.js"></script>
+</body>
+</html>
